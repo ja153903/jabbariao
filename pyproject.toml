@@ -6,5 +6,7 @@ exclude = ["**/node_modules",
 defineConstant = { DEBUG = true }
 venv = "jabbariao_core"
 
+pythonVersion = "3.10"
+
 reportMissingImports = true
 reportMissingTypeStubs = false
