@@ -1,0 +1,10 @@
+[tool.pyright]
+include = ["src"]
+exclude = ["**/node_modules",
+    "**/__pycache__",
+]
+defineConstant = { DEBUG = true }
+venv = "jabbariao_core"
+
+reportMissingImports = true
+reportMissingTypeStubs = false
