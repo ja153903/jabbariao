@@ -1,9 +1,6 @@
 [tool.pyright]
 include = ["config", "jabbariao"]
-exclude = ["**/node_modules",
-    "**/__pycache__",
-]
-defineConstant = { DEBUG = true }
+exclude = ["**/__pycache__"]
 venv = "jabbariao_core"
 
 pythonVersion = "3.10"
