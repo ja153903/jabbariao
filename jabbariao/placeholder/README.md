@@ -11,4 +11,3 @@ These models include the following:
 - `Post`
 - `Comment`
 - `Todo`
-
