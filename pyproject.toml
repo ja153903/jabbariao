@@ -1,5 +1,5 @@
 [tool.pyright]
-include = ["src"]
+include = ["config", "jabbariao"]
 exclude = ["**/node_modules",
     "**/__pycache__",
 ]
