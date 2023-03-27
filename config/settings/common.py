@@ -68,19 +68,19 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "config.wsgi.application"
-
-# TODO: Update this to use MySQL database from PlanetScale
-# We should also note here that different branches are going to be used
-# depending on the environment we're going to be working with.
-# but this requires an independent sync task from master to the
-# other branches?
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": config("DB_NAME"),
+        "HOST": config("DB_HOST"),
+        "PORT": config("DB_PORT"),
+        "USER": config("DB_USER"),
+        "PASSWORD": config("DB_PASSWORD"),
+        "OPTIONS": {"ssl": {"ca": config("MYSQL_ATTR_SSL_CA")}},
     }
 }
+
+WSGI_APPLICATION = "config.wsgi.application"
 
 AUTH_PASSWORD_VALIDATORS = [
     {

@@ -18,6 +18,7 @@ Markdown==3.4.3
 msgpack==1.0.5
 mypy==1.1.1
 mypy-extensions==1.0.0
+mysqlclient==2.1.1
 nodeenv==1.7.0
 packaging==23.0
 pathspec==0.11.1
