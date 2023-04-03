@@ -17,12 +17,18 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 
-from jabbariao.blog.views import PostViewSet
+from jabbariao.blog.views import (
+    PostViewSet,
+    get_published_posts_list,
+    get_published_post_detail,
+)
 
 router = routers.DefaultRouter()
 router.register(r"posts", PostViewSet, basename="post")
 
 urlpatterns = [
+    path("/api/v1/public/posts/", get_published_posts_list),
+    path("/api/v1/public/posts/<int:pk>", get_published_post_detail),
     path("api/v1", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
     path("admin/", admin.site.urls),
