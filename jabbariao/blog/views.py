@@ -8,9 +8,9 @@ from .serializers import PostListSerializer, PostDetailSerializer
 
 class PostViewSet(viewsets.ModelViewSet):
     """
-    PostViewSet is only used for the CMS side of my personal website.
-
-    This should not be used for querying posts in the actual website
+    PostViewSet is used for the CMS side of the website.
+    This means that the endpoints generated from this viewset
+    are not used to query the blog posts in jabbariao.com
     """
 
     queryset = Post.objects.all()
