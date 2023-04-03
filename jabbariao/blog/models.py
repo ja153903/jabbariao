@@ -6,3 +6,6 @@ from jabbariao.core.models import BaseModel
 class Post(BaseModel):
     title = models.CharField(max_length=255)
     content = models.TextField(null=True)
+
+    class Meta:
+        indexes = [models.Index(fields=["title"], name="title_index")]
